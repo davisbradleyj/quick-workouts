@@ -24,11 +24,10 @@ function exercise() {
 }
 
 // write the workouts, plus a plank, to the page
+const EXS = document.querySelectorAll('.ex')
 function workout() {
-  document.getElementById("ex1").textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise();
-  document.getElementById("ex2").textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise();
-  document.getElementById("ex3").textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise();
-  document.getElementById("ex4").textContent = (Math.floor(Math.random() * 15) + 45) + ' Seconds Plank';
+  EXS.forEach(ex => ex.textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise())
+  document.querySelector(".plank").textContent = (Math.floor(Math.random() * 15) + 45) + ' Seconds Plank';
 }
 
 workout();
