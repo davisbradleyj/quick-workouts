@@ -29,11 +29,12 @@ function exercise() {
 function workout() {
   EXS.forEach(ex => ex.textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise())
   document.querySelector(".plank").textContent = (Math.floor(Math.random() * 15) + 45) + ' Seconds Plank';
+  SETS.forEach(set => set.classList.remove('text-decoration-line-through'));
 }
 
 // Modify text to strikethrough the workout once complete
-SETS.forEach(set => set.addEventListener('click', (e) => {
-    set.classList.add('text-decoration-line-through')
+SETS.forEach(set => set.addEventListener('click', () => {
+  set.classList.add('text-decoration-line-through');
 }))
 
 workout();
