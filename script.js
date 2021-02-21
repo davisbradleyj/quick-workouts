@@ -1,5 +1,5 @@
 
-// establish a baseline group of calisthenics
+// establish a baseline group of calisthenics, and other constant variables throughout code
 const EXERCISES = [
   'Pushups',
   'Clock Pushups',
@@ -13,10 +13,12 @@ const EXERCISES = [
   'Lunges',
   'Triceps Dips'
 ]
+const LIFT = document.querySelector('#exBtn');
+const EXS = document.querySelectorAll('.ex');
+const SETS = document.querySelectorAll('h3');
 
 // hook into the Exercise button and create a click listener
-const LIFT = document.querySelector('#exBtn')
-LIFT.addEventListener('click',workout)
+LIFT.addEventListener('click', workout)
 
 // create the function to select an exercise, repeatable for the 3 sets in some cases
 function exercise() {
@@ -24,10 +26,14 @@ function exercise() {
 }
 
 // write the workouts, plus a plank, to the page
-const EXS = document.querySelectorAll('.ex')
 function workout() {
   EXS.forEach(ex => ex.textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise())
   document.querySelector(".plank").textContent = (Math.floor(Math.random() * 15) + 45) + ' Seconds Plank';
 }
+
+// Modify text to strikethrough the workout once complete
+SETS.forEach(set => set.addEventListener('click', (e) => {
+    set.classList.add('text-decoration-line-through')
+}))
 
 workout();
