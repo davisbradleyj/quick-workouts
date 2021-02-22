@@ -1,33 +1,36 @@
 
 // establish a baseline group of calisthenics, and other constant variables throughout code
-const EXERCISES = [
+const UPPER = [
   'Pushups',
   'Clock Pushups',
   'Narrow Pushups',
   'Wide Pushups',
+]
+const CORE = [
   'Situps',
   'Crunches',
   'Mountain Climbers',
   'Shoulder Touches',
+]
+const LOWER = [
   'Squats',
   'Lunges',
-  'Triceps Dips'
+  'Back Lunges',
 ]
 const LIFT = document.querySelector('#exBtn');
-const EXS = document.querySelectorAll('.ex');
+const UP = document.querySelector('.up');
+const CO = document.querySelector('.co');
+const LO = document.querySelector('.lo');
 const SETS = document.querySelectorAll('h3');
 
 // hook into the Exercise button and create a click listener
 LIFT.addEventListener('click', workout)
 
-// create the function to select an exercise, repeatable for the 3 sets in some cases
-function exercise() {
-  return EXERCISES[Math.floor(Math.random() * EXERCISES.length)]
-}
-
 // write the workouts, plus a plank, to the page
 function workout() {
-  EXS.forEach(ex => ex.textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + exercise())
+  UP.textContent = (Math.floor(Math.random() * 10) + 15) + ' ' + UPPER[Math.floor(Math.random() * UPPER.length)]
+  CO.textContent = (Math.floor(Math.random() * 10) + 20) + ' ' + CORE[Math.floor(Math.random() * CORE.length)]
+  LO.textContent = (Math.floor(Math.random() * 10) + 25) + ' ' + LOWER[Math.floor(Math.random() * LOWER.length)]
   document.querySelector(".plank").textContent = (Math.floor(Math.random() * 15) + 45) + ' Seconds Plank';
   SETS.forEach(set => set.classList.remove('text-decoration-line-through'));
 }
