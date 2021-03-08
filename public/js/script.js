@@ -66,4 +66,5 @@ SETS.forEach(set => set.addEventListener('click', () => {
   set.classList.add('text-decoration-line-through');
 }))
 
+// queue LMFAO - https://www.youtube.com/watch?v=wyx6JDQCslE
 workout();
