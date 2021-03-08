@@ -1,19 +1,25 @@
 
 // establish a baseline group of calisthenics, and other constant variables throughout code
 const UPPER = [
-  'Pushups',
+  'Strict Pushups',
   'Clock Pushups',
   'Narrow Pushups',
   'Wide Pushups',
+  'Clap Pushups',
 ]
 const CORE = [
   'Situps',
   'Crunches',
   'Mountain Climbers',
   'Shoulder Touches',
+  'Bicycle Crunches',
+  'V Ups',
+  'Toe Touches',
+  'Russian Twist',
 ]
 const LOWER = [
   'Squats',
+  'Squat Hold',
   'Lunges',
   'Back Lunges',
 ]
