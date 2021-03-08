@@ -6,4 +6,13 @@
   .workout {
     width: 75% !important;
   }
+
+  .mobileColumn {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
 }
+
