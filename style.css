@@ -1,9 +1,0 @@
-.workout {
-  width: 50% !important;
-}
-
-@media (max-width: 720px) {
-  .workout {
-    width: 75% !important;
-  }
-}

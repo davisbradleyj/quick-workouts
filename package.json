@@ -1,0 +1,23 @@
+{
+  "name": "quick-workouts",
+  "version": "1.0.0",
+  "description": "A simple web app to get a quick workout in, ideally several times a day to get us up from our desks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davisbradleyj/quick-workouts.git"
+  },
+  "author": "Brad Davis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davisbradleyj/quick-workouts/issues"
+  },
+  "homepage": "https://github.com/davisbradleyj/quick-workouts#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
