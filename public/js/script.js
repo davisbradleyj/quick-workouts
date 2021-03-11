@@ -19,9 +19,11 @@ const CORE = [
 ]
 const LOWER = [
   'Squats',
-  'Squat Hold',
+  'Second Squat Hold',
   'Lunges',
   'Back Lunges',
+  'Side Lunges',
+  'Cossack Squat'
 ]
 let counter = JSON.parse(localStorage.getItem('sets'));
 const SETCOUNTER = document.querySelector('#set-counter');
